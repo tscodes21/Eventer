@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0c0b10" />
+  <meta name="description" content="Find your next favorite thing. Discover music, art, food and culture events near you." />
+  <title>afterglow — find your next favorite thing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="afterglow home"><span class="brand-mark">a<span>✳</span></span><span>afterglow</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation"><a class="active" href="#discover">Discover</a><a href="#categories">Categories</a><a href="#about">About</a></nav>
+    <div class="top-actions"><button class="city-button" id="cityButton" aria-label="Choose city"><span class="pin">⌖</span> Mumbai <span class="chevron">⌄</span></button><button id="themeToggle" class="theme-toggle" aria-label="Toggle color theme">☼</button><a class="nav-cta" href="#events">Find an event <span>↗</span></a><button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button></div>
+  </header>
+  <main id="home">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-grain"></div><div class="hero-copy"><div class="eyebrow"><span class="live-dot"></span> YOUR CITY, TURNED UP</div><h1 id="hero-title">Make room<br>for <em>good things.</em></h1><p>The gigs, gatherings and little moments that make a city feel like yours.</p><div class="hero-actions"><a class="button button-primary" href="#events">Explore what’s on <span>↗</span></a><div class="social-proof"><div class="avatar-stack"><i>R</i><i>M</i><i>A</i><i>+</i></div><span><b>2.4k+</b> plans made this week</span></div></div></div>
+      <div class="hero-art" aria-label="A collage of city culture, live music and art"><img src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=700&q=85" alt="Crowd enjoying a live music show"/><img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=600&q=85" alt="Colorful art installation"/><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=85" alt="Festival lights and crowd"/><img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=600&q=85" alt="Bright contemporary artwork"/><img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=85" alt="People dancing at a concert"/><img src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=600&q=85" alt="Artist performing on stage"/><div class="art-wash"></div><div class="hero-note note-top"><span class="note-icon">✳</span><span>OUT THERE<br><b>is where it happens</b></span></div><div class="hero-event"><div><span class="mini-label">TONIGHT · 8:00 PM</span><h3>Somewhere<br>in the sound</h3></div><span class="round-arrow">↗</span></div></div>
+      <div class="hero-bottom"><span>01 — 04 <i></i> Find your people</span><span class="scroll-label">SCROLL TO EXPLORE ↓</span><span class="hero-location">19°04' N &nbsp; 72°52' E</span></div>
+    </section>
+    <section class="discover-section" id="discover">
+      <div class="section-heading"><div><div class="eyebrow eyebrow-muted">A LITTLE OF EVERYTHING</div><h2>Your kind of <em>out there.</em></h2></div><a class="text-link" href="#events">All events <span>↗</span></a></div>
+      <div class="category-row" id="categories" aria-label="Filter events by category"><button class="category-chip selected" data-category="All"><span>✳</span> Everything</button><button class="category-chip" data-category="Music"><span>♫</span> Music</button><button class="category-chip" data-category="Food"><span>◒</span> Food & drink</button><button class="category-chip" data-category="Arts"><span>✳</span> Art & culture</button><button class="category-chip" data-category="Wellness"><span>☼</span> Wellness</button><button class="category-chip" data-category="Nightlife"><span>◉</span> Nightlife</button></div>
+      <div class="toolbar"><div><span class="result-count" id="resultCount">06</span><span class="toolbar-label">things happening near you</span></div><label class="search-box"><span>⌕</span><input id="eventSearch" type="search" placeholder="Find your next thing…" aria-label="Search events"><kbd>⌘ K</kbd></label></div>
+      <div class="event-grid" id="events" aria-live="polite"></div>
+      <div class="empty-state" id="emptyState" hidden><span>◌</span><h3>No plans found (yet).</h3><p>Try another search or explore a different category.</p></div>
+      <div class="load-more-wrap"><button class="button button-outline" id="loadMore">That’s not all <span>↓</span></button></div>
+    </section>
+    <section class="manifesto" id="about"><div class="manifesto-star">✳</div><div class="eyebrow">A NOTE FROM US</div><h2>Life’s better<br><em>off the feed.</em></h2><p>We’re here for the plans you’ll talk about on Monday. The new favorite spot. The song you didn’t know you needed. The people you’re glad you met.</p><a class="text-link" href="#events">Go make a memory <span>↗</span></a><span class="manifesto-orbit">GO ON, GET OUT&nbsp; · &nbsp;GO ON, GET OUT&nbsp; · &nbsp;</span></section>
+    <section class="newsletter"><div><span class="eyebrow">THE GOOD STUFF, OCCASIONALLY</span><h2>Your weekend, <em>sorted.</em></h2><p>Fresh finds, good plans. Straight to your inbox.</p></div><form id="newsletterForm" class="newsletter-form"><label class="sr-only" for="newsletterEmail">Email address</label><input id="newsletterEmail" type="email" placeholder="Your email address" required><button type="submit" aria-label="Subscribe">Count me in <span>↗</span></button><small id="newsletterMessage">No spam, just good plans.</small></form></section>
+  </main>
+  <footer><a class="brand" href="#home"><span class="brand-mark">a<span>✳</span></span><span>afterglow</span></a><span>GOOD PLANS. GOOD PEOPLE. GOOD GOD, IT’S FRIDAY.</span><span>Made for being out there. © 2026</span></footer>
+  <dialog id="eventDialog" class="event-dialog"><button class="dialog-close" aria-label="Close event details">×</button><div id="dialogContent"></div></dialog>
+  <dialog id="registerDialog" class="register-dialog"><button class="dialog-close" aria-label="Close registration">×</button><div id="registerContent"></div></dialog>
+  <dialog id="cityDialog" class="city-dialog"><button class="dialog-close" aria-label="Close city selection">×</button><div class="city-picker"><span class="eyebrow">YOUR CITY, YOUR PLANS</span><h2>Where are you <em>at?</em></h2><p>Choose a city to see what’s happening around you.</p><label class="city-search"><span>⌕</span><input id="citySearch" type="search" placeholder="Search Indian cities…" aria-label="Search Indian cities"></label><div class="city-list" id="cityList"></div></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
